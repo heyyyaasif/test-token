@@ -95,7 +95,7 @@ async def start_command(client: Client, message: Message):
                 logging.warning(f"ᴜsᴇʀ {id} ᴇɴᴛᴇʀᴇᴅ ɪɴᴠᴀʟɪᴅ ᴛᴏᴋᴇɴ : {token}")
                 return await message.reply("<blockquote>ʏᴏᴜʀ ᴛᴏᴋᴇɴ ɪs ɪɴᴠᴀʟɪᴅ ᴏʀ ᴇxᴘɪʀᴇᴅ. ᴛʀʏ ᴀɢᴀɪɴ ʙʏ ᴄʟɪᴄᴋɪɴɢ /start</blockquote>")
 
-        # Ensure the token is at least 30 seconds old before verification
+        # Ensure the token is at least 40 seconds old before verification
             if not generated_time or (time.time() - generated_time) < MIN_VERIFY_TIME:
                 remaining_time = int(MIN_VERIFY_TIME - (time.time() - generated_time))
                 logging.warning(f"ᴜsᴇʀ {id} ᴛʀɪᴇᴅ ᴛᴏ ᴠᴇʀɪғʏ ᴛᴏᴏ ᴇᴀʀʟʏ. ʀᴇᴍᴀɪɴɪɴɢ ᴛɪᴍᴇ : {remaining_time} sec")
@@ -116,7 +116,8 @@ async def start_command(client: Client, message: Message):
             return await message.reply(
                 f"<blockquote>» ᴄᴏɴɢʀᴀᴛᴜʟᴀᴛɪᴏɴs !!, 🥳🥳\n\n»ʏᴏᴜʀ ᴛᴏᴋᴇɴ ʜᴀs ʙᴇᴇɴ sᴜᴄᴄᴇssғᴜʟʟʏ ᴠᴇʀɪғɪᴇᴅ ᴀɴᴅ ɴᴏᴡ ɪᴛ ɪs ᴠᴀʟɪᴅ ғᴏʀ {get_exp_time(VERIFY_EXPIRE)}\n\n» ɴᴏᴡ ʏᴏᴜ <a href='https://t.me/Battousai_Network/31'>ɢᴇᴛ ᴀᴄᴇss ᴛᴏ ᴀʟʟ 6 ʙᴏᴛs</a> ᴏғ @anime_raven ғᴏʀ {get_exp_time(VERIFY_EXPIRE)}.</blockquote>",
                 protect_content=False,
-                quote=True
+                quote=True,
+		disable_web_page_preview=True
             )
 
         if not verify_status['is_verified']:
