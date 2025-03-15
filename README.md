@@ -43,8 +43,11 @@
 ### 9. TOKEN VERIFICATION 💸: 
 <i>You can add or remove token verfication system by providing the required details like shortner url/api key/token timer/etc through bot, and you can also remove/turn off token verification if needed.</i>
 
-### 10. LINK BYPASS DETECTION 💀: 
+### 10. LINK BYPASS DETECTION : 
 <i>If a bot user try to bypass the token verification, then the bot will immediately detect it and give a warning to the user and says to verify again. Isn't it Good ?</i>
+
+### 11. BROADCAST WITH PREMIUM EMOJIS : 
+<i>If you want to do promo the new feature is for you for sure you will like it. Just Send the msg that you wanna broadcast with premium emojis and reply that msg with /fcast you will se the magic 🪄</i>
 
 ### <i>🚀 In addition to the above, more user-friendly and advanced interaction features have been added. It is upgraded version of previous bot features, So more interactive then previous.</i>
 
